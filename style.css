@@ -1,0 +1,26 @@
+h1 {
+  text-align: center;
+}
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form {
+  width: 320px;
+}
+.wrapper {
+  margin-bottom: 20px;
+}
+.button-action {
+  padding: 15px 0;
+  width: 120px;
+  margin-bottom: 50px;
+}
+.hidden {
+  visibility: hidden;
+}

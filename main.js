@@ -21,9 +21,9 @@ buttonAction.addEventListener("click", async () => {
         getSeconds(currency.Cur_DateEnd) > getSeconds(endDateValue)
     );
     if (arrayCurrency.length !== 0) {
-      const res = await getPriceCurrency(arrayCurrency[0].Cur_ID, startDateInput.value, endDateInput.value);
-      const pricesValues = res.map((item) => item.Cur_OfficialRate);
-      const daysValues = res.map((_, i) => i);
+      const arrayPrices = await getPriceCurrency(arrayCurrency[0].Cur_ID, startDateInput.value, endDateInput.value);
+      const pricesValues = arrayPrices.map((item) => item.Cur_OfficialRate);
+      const daysValues = arrayPrices.map((_, i) => i);
       const maxPrice = Math.max(...pricesValues);
       initChart(daysValues, pricesValues, maxPrice);
     } else {
